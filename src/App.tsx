@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as styles from './App.module.sass'
+import styles from './App.module.sass'
 
 export const App: React.FC<{}> = (props) => {
   console.log({styles})

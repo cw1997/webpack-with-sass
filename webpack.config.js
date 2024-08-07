@@ -36,12 +36,20 @@ module.exports = {
         use: [
           // Creates `style` nodes from JS strings
           // devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              defaultExport: true,
+            },
+          },
           // Translates CSS into CommonJS
           {
             loader: "css-loader",
             options: {
-              // esModule: false,
+              esModule: true,
+              modules: {
+                namedExport: true,
+              },
             },
           },
           {
