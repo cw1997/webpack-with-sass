@@ -1,8 +1,9 @@
 import React from "react";
 
-import styles from './App.module.sass'
+import * as styles from './App.module.sass'
 
 export const App: React.FC<{}> = (props) => {
+  console.log({styles})
   return (
     <div className={styles.container}>
       <ul>
